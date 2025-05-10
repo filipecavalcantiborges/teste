@@ -1,0 +1,181 @@
+   EXEMPLO DE TUDO QUE SEI PYTHON
+
+
+variavel==> a= letra aleatória
+print==> faz com que apareça no terminal oque voce escreve, tipos str(texto),
+int(numero inteiro), float(numero decimal), boolean(verdadeiro ou falso)
+ input(armazena estrutura de dados fornecida pelo usuario)
+  operadores==> 
+  soma=1+1
+  multiplicação=4*4
+  divisão=30/3
+  potencia=7**2
+  
+  print("soma",soma)
+  print("divisão",divisão)
+  print("multiplicação",multiplicação)
+  print("multiplicação",potencia)
+
+exemplo de Listas e loop com for///
+ien=[]
+for x in range(3):
+    nome1=str(input("primeiro nome : "))
+    nome2=str(input("segundo nome : "))
+    inf=[nome1, nome2]
+    ien.append(inf)
+ lista em ien:[['nome1', 'nome2'],['nome1', 'nome2'], ['nome1', 'nome2']]   
+print(2*len(ien), "pessoas!")
+print(ien)
+for n in ien:
+    sóumnome=n[1]
+    print("o segundo nome de cada lista =>",sóumnome)
+segundo exemplo///
+notas_alunos=[]
+for x in range(3):
+    rm=int(input("Qual o RM do aluno?: "))
+    nota=float(input("Qual a nota do aluno?: "))
+    ident_e_nota=[rm, nota]
+    notas_alunos.append(ident_e_nota)
+
+for x in notas_alunos:
+    rm=x[0]
+    print("O RM dos alunos são respectivamente=>",rm)
+    rm=x[1]
+    print(" e essas são suas notas")
+
+ exemplo de  if e litas///adivinhação
+
+ pm=["escorpiões", "chocolate", "ursos", "carros", "spray de pimenta"]
+ escolha=int(input("escolha um número de 1 a 5: "))
+ if 1 > escolha > 5:
+    print("Escolha inválida!")
+ else:
+    escolha_pcentende=escolha-1
+    if pm[escolha_pcentende]==pm[0] or pm[escolha_pcentende]==pm[2] or pm[escolha_pcentende]==pm[4]:
+        print("Se Deu Mal!")
+    else:
+        print("Boa Escolha!")
+
+ Exmeplo de lista e loop com while 
+notas=[]
+contador=1
+while contador <= 2:
+    nome=str(input("Qual o nome do aluno?: "))
+    nota=float(input("Qual a nota desse aluno?: "))
+    nen=[nome, nota]
+    notas.append(nen)
+    contador=contador + 1
+print(notas)                              
+lnome=[]
+for x in notas:
+    nome=x[0]
+    lnome.append(nome)
+print("lista nome: ",lnome)
+lnota=[]
+for x in notas:
+    nota=x[1]    
+    lnota.append(nota)
+print("lista nota: ", lnota)
+print("o nome do primeiro aluno é ",lnome[0], "e sua nota é ",lnota[0])
+print("o nome do segundo aluno é ",lnome[1], "e sua nota é ",lnota[1])
+
+Segundo exemplo com while///
+contador= 10
+while contador>=1:
+   print(contador)
+   contador=contador-1
+
+DIcionarios Exemplos e estudo///
+pessoa={
+   "nome":"Filipe",
+   "idade":19,
+   "peso":"73kg",
+   "Altura":"1,70 de altura"
+}    
+print(pessoa["idade"])
+print(pessoa["nome"])
+print(pessoa["Altura"])
+print(pessoa["peso"])
+
+ lista de dicionarios de inimigos de um RPG//
+npcs=[
+   {"nome":"monstro1","dano":100,"hp":500},
+   {"nome":"monstro2","dano":120,"hp":800},
+   {"nome":"monstro3","dano":160,"hp":670},
+   {"nome":"monstro4","dano":200,"hp":600},
+]
+print(npcs[2]["hp"])
+teste de para adicionar chaves em dicionarios///
+agenda={}
+agenda["nome"]="Filipe"
+agenda["idade"]="19"
+agenda["altura"]="1,70"
+print(agenda["nome"])
+print(agenda["idade"])
+print(agenda["altura"])
+
+CHat/AInda não sei sobre a função import//
+import os
+mensagens=[]
+nome=input("nome: ")
+
+while True:
+   limpando o terminal
+   os.system("cls")
+   if len(mensagens)>0:
+      for m in mensagens:
+         print(m["nome"],"-",m["texto"])
+  print("______________________________")
+obtendo o texto
+   texto=input("mensagem: ")
+  if texto=="fim":
+      print(" fim da conversa")
+      break
+adicionado mensagens na lista "mensagens"///
+   mensagens.append({
+      "nome":nome,
+      "texto":texto
+   })
+teste com tudo
+listas
+lista=[13,231,231,412,24,1]
+sum= soma
+len= lenght/comprimento/tamanho
+min= minimo
+max= máximo
+soma_lista = sum(lista)
+print(soma_lista)
+quatidade_da_lista=len(lista)
+print(quatidade_da_lista)
+print(lista[0])
+adicionar um item
+lista.append(12)
+remover um item 
+lista.remove(lista[0])
+print(lista)
+OR
+lista.pop(0)
+a função "pop" permite adicionar o índice do item a ser removido ao invés do nome 
+como na função "remove"
+
+editar itens de listas
+preços=[1000,1900,1900,320]
+print(preços)
+preços[0]=1200
+print(preços)
+
+contar quantas vezes um item aparece na lista
+print(preços.count(1900))
+ordenar uma lista
+preços.sort()
+print(preços)
+
+Basico de CLasse e POO(Prgramação orientada a objetos):
+   class Carro:
+    def __init__(self,marca,modelo,ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    def exibir_inf_do_carro(self):
+        print(self.marca,self.modelo, self.ano)
+self serve para chamar/acessar os metodos ou seja as funções de dentro da classe
